@@ -1,8 +1,8 @@
 import React from 'react';
 
-const Sidebar = ({ onClose, categories }) => {
+const Sidebar = ({ onClose }) => {
   return (
-  
+  <div>
     
     <div className="sidebar open">
       <div className="bg-white w-72 h-full pt-3 pl-2 fixed top-0 left-0 transform translate-x-0 flex flex-col">
@@ -38,22 +38,19 @@ const Sidebar = ({ onClose, categories }) => {
                 />
             </div>
         </form>
-      <div className='mt-8 w-full border-t border-forsearch '>
-      {categories.map(category => (
-    <div key={category.data[0].category} className="flex items-center ">
-      <div>
-        <img src={category.data[0].category_img} alt={category.data[0].category} className='w-12 h-12' />
+      <div className='mt-8 w-full border-t border-forsearch pt-1'>
+      <div class="flex">
+        <div className='pl-1 pr-3'>picture</div>
+        <div>name</div>
+        <div class="ml-auto">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" /></svg>
+        </div>
       </div>
-      <div>{category.data[0].category}</div>
-      <div className="ml-auto">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
-          <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
-        </svg>
+       
       </div>
-    </div>
-  ))}
+      
       </div>
-
     </div>
     </div> 
   );

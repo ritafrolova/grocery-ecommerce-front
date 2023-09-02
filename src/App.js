@@ -1,7 +1,6 @@
 import React from 'react';
 import ProductCard from './components/ProductCard';
 import Header from './components/Header';
-import Sidebar from './components/Sidebar';
 import 'tailwindcss/tailwind.css';
 
 
@@ -96,7 +95,7 @@ const App = () => {
   return (
 <div>
   <Header />
-  <Sidebar categories={fake_sidebar_data} /> 
+  
     <div>
       {fake_main_page.map(section => (
         <div key={section.section_name}>
