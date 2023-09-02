@@ -1,6 +1,55 @@
-import React from 'react';
+import React,{useState} from 'react';
 
 const Sidebar = ({ onClose }) => {
+  const fake_sidebar_data = [
+    {
+      data: [
+        {
+          category: 'Овощи и фрукты',
+          category_img:"https://img.freepik.com/premium-vector/green-apple-vector-isolated-icon-emoji-illustration-apple-vector-emoticon_603823-866.jpg",
+          subcategories:[
+            {
+              subcategory : "Овощи",
+              subcategory_img: "https://img.freepik.com/premium-vector/green-apple-vector-isolated-icon-emoji-illustration-apple-vector-emoticon_603823-866.jpg",
+            },
+            {
+              subcategory : "Фрукты",
+              subcategory_img: "https://img.freepik.com/premium-vector/green-apple-vector-isolated-icon-emoji-illustration-apple-vector-emoticon_603823-866.jpg",
+            },
+            {
+              subcategory : "Грибы",
+              subcategory_img: "https://img.freepik.com/premium-vector/green-apple-vector-isolated-icon-emoji-illustration-apple-vector-emoticon_603823-866.jpg",
+            }
+            
+  
+          ]
+        },
+        {
+          category: 'Напитки',
+          category_img:"https://img.freepik.com/premium-vector/green-apple-vector-isolated-icon-emoji-illustration-apple-vector-emoticon_603823-866.jpg",
+          subcategories:[
+            {
+              subcategory : "Чай",
+              subcategory_img: "https://img.freepik.com/premium-vector/green-apple-vector-isolated-icon-emoji-illustration-apple-vector-emoticon_603823-866.jpg",
+            },
+            {
+              subcategory : "Газировки",
+              subcategory_img: "https://img.freepik.com/premium-vector/green-apple-vector-isolated-icon-emoji-illustration-apple-vector-emoticon_603823-866.jpg",
+            },
+            {
+              subcategory : "Сок",
+              subcategory_img: "https://img.freepik.com/premium-vector/green-apple-vector-isolated-icon-emoji-illustration-apple-vector-emoticon_603823-866.jpg",
+            }
+            
+  
+          ]
+        }
+      ]
+    }
+  ]
+  
+  const [openCategory, setOpenCategory] = useState(null);
+  
   return (
   <div>
     
@@ -38,17 +87,32 @@ const Sidebar = ({ onClose }) => {
                 />
             </div>
         </form>
-      <div className='mt-8 w-full border-t border-forsearch pt-1'>
-      <div class="flex">
-        <div className='pl-1 pr-3'>picture</div>
-        <div>name</div>
-        <div class="ml-auto">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
-            <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" /></svg>
+        <div>
+          {fake_sidebar_data.map((categoryData, index) => (
+            <div key={index}>
+              <h2 onClick={() => setOpenCategory(index)}>
+                {categoryData.category}
+              </h2>
+              {openCategory === index && (
+                <div>
+                  <img className='h-8' src={categoryData.category_img} alt={categoryData.category} />
+                  <ul>
+                    {categoryData.subcategories.map((subcategoryData, subIndex) => (
+                      <li key={subIndex}>
+                        <h3>{subcategoryData.subcategory}</h3>
+                        <img
+                        className='h-8'
+                          src={subcategoryData.subcategory_img}
+                          alt={subcategoryData.subcategory}
+                        />
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+            </div>
+          ))}
         </div>
-      </div>
-       
-      </div>
       
       </div>
     </div>

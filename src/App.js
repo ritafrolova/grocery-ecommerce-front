@@ -44,52 +44,6 @@ const fake_main_page = [
     ]
   }
 ]
-const fake_sidebar_data = [
-  {
-    data: [
-      {
-        category: 'Овощи и фрукты',
-        category_img:"https://img.freepik.com/premium-vector/green-apple-vector-isolated-icon-emoji-illustration-apple-vector-emoticon_603823-866.jpg",
-        subcategories:[
-          {
-            subcategory : "Овощи",
-            subcategory_img: "https://img.freepik.com/premium-vector/green-apple-vector-isolated-icon-emoji-illustration-apple-vector-emoticon_603823-866.jpg",
-          },
-          {
-            subcategory : "Фрукты",
-            subcategory_img: "https://img.freepik.com/premium-vector/green-apple-vector-isolated-icon-emoji-illustration-apple-vector-emoticon_603823-866.jpg",
-          },
-          {
-            subcategory : "Грибы",
-            subcategory_img: "https://img.freepik.com/premium-vector/green-apple-vector-isolated-icon-emoji-illustration-apple-vector-emoticon_603823-866.jpg",
-          }
-          
-
-        ]
-      },
-      {
-        category: 'Напитки',
-        category_img:"https://img.freepik.com/premium-vector/green-apple-vector-isolated-icon-emoji-illustration-apple-vector-emoticon_603823-866.jpg",
-        subcategories:[
-          {
-            subcategory : "Чай",
-            subcategory_img: "https://img.freepik.com/premium-vector/green-apple-vector-isolated-icon-emoji-illustration-apple-vector-emoticon_603823-866.jpg",
-          },
-          {
-            subcategory : "Газировки",
-            subcategory_img: "https://img.freepik.com/premium-vector/green-apple-vector-isolated-icon-emoji-illustration-apple-vector-emoticon_603823-866.jpg",
-          },
-          {
-            subcategory : "Сок",
-            subcategory_img: "https://img.freepik.com/premium-vector/green-apple-vector-isolated-icon-emoji-illustration-apple-vector-emoticon_603823-866.jpg",
-          }
-          
-
-        ]
-      }
-    ]
-  }
-]
 
 const App = () => {
   return (
